@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AngularJS Routes example</title>
+    <script src="../lib/angular.min.js"></script>
+    <script src="../lib/angular-route.min.js"></script>
+</head>
+
+<body ng-app="sampleApp">
+
+<a href="#/route1">Route 1</a><br/>
+<a href="#/route2">Route 2</a><br/>
+
+
+<div ng-view></div>
+
+<script>
+    var module = angular.module("sampleApp", ['ngRoute']);
+
+    module.config(['$routeProvider',
+        function($routeProvider) {
+            $routeProvider.
+                    when('/route1', {
+                        templateUrl: 'todo.html',
+                        controller: 'IndexCtrl'
+                    }).
+                    when('/route2', {
+                        templateUrl: 'angular-route-template-2.jsp',
+                        controller: 'RouteController'
+                    }).
+                    otherwise({
+                        redirectTo: '/'
+                    });
+        }]);
+
+    module.controller("RouteController", function($scope) {
+        console.log(RouteController);
+
+    });
+    module.controller('IndexCtrl', ['$scope', '$http', function($scope, $http) {
+
+        console.log('LOAD');
+
+        $scope.toDoList =[];
+        $http.get('../js/controller/data.json').success(function(data){
+            $scope.toDoList = data;
+            console.log(data);
+        });
+
+
+        $scope.add = function (form) {
+            $scope.toDoList.push({
+                text : form.newText,
+                done : false
+            });
+            $scope.newText = '';
+        };
+    }]);
+</script>

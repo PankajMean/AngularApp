@@ -1,0 +1,28 @@
+{
+  "name": "PankajApps",
+  "version": "0.0.1",
+  "authors": [
+    "Pankaj Kumar Dewangan <pankaj.java12@gmail.com>"
+  ],
+  "description": "This is the basic application to show functionality of angular js.",
+  "main": "/view/index.htmk",
+  "keywords": [
+    "angular",
+    "js",
+    "bootstrap",
+    "css3"
+  ],
+  "license": "MIT",
+  "homepage": "http://localhost:port/PankajApps/view/index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3",
+    "angular-translate": "~2.7.2"
+  }
+}

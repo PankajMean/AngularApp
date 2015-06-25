@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="PankajApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../lib/angular.min.js"></script>
+    <script src="../lib/angular-route.min.js"></script>
+    <script src="../js/controller/index.js"></script>
+</head>
+<body>
+<div ng-controller="IndexCtrl as ctrl">
+
+    Selected : {{data.name}} <br>
+    Check Box value : {{data.done | checkmark}} <br>
+
+    <form ng-submit="add(this)">
+        <input type="text" ng-model="newText">
+        <input type="submit" value="ADD">
+    </form>
+
+
+    <ul ng-repeat="list in toDoList" class="phones">
+    <li class="thumbnail phone-listing"> <input type="checkbox" ng-model="list.done"> <a href="#/details/{{list.text}}/{{list.done}}" ng-class="{active:{{list.done}}}">{{list.text}}</a><br/> </li>
+    </ul>
+</div>
+</body>
+</html>
