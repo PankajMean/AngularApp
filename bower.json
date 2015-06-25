@@ -22,7 +22,10 @@
     "tests"
   ],
   "dependencies": {
+    "angular": "~1.4.1",
     "bootstrap": "~3",
-    "angular-translate": "~2.7.2"
+    "angular-translate": "~2.7.2",
+    "angular-animate": "~1.4.1",
+    "angular-resource": "~1.4.1"
   }
 }
