@@ -3,7 +3,7 @@
  */
 var app = angular.module('sampleApp');
 
-app.controller("View2Controller", ['$scope', '$translate', function($scope, $translate) {
+app.controller("LocalizationController", ['$scope', '$translate', function($scope, $translate) {
     $scope.changeLanguage = function (langKey) {
         $translate.use(langKey);
     }
