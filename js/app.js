@@ -10,8 +10,8 @@ module.config(['$routeProvider',
                 templateUrl: 'todo.html',
                 controller: 'IndexCtrl'
             }).
-            when('/route2', {
-                templateUrl: 'view2.html',
+            when('/localization', {
+                templateUrl: 'localization.html',
                 controller: 'View2Controller'
             }).
             when('/details/:name/:val', {
