@@ -11,6 +11,8 @@
     <script src="../lib/angular-animate.min.js"></script>
     <script src="../lib/angular-translate/angular-translate.js"></script>
     <script src="../lib/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/animations.css">
+    <!---->
 
     <!--Bootstrap Libararies-->
     <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.min.css">
@@ -18,29 +20,21 @@
     <script src="../lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <!---->
 
-
-    <!-- Latest compiled and minified CSS -->
-
-
-    <!-- Optional theme -->
-
-
-    <!-- Latest compiled and minified JavaScript -->
-
-
     <!--Custom File-->
     <script src="../js/app.js"></script>
     <script src="../js/controller/index.js"></script>
-    <script src="../js/controller/View2Controller.js"></script>
+    <script src="../js/controller/LocalizationController.js"></script>
     <script src="../filters/checker.js"></script>
     <script src="../services/sampleService.js"></script>
+    <script src="../services/menuService.js"></script>
+    <!---->
 
-    <link rel="stylesheet" href="../css/animations.css">
+
 
 
 </head>
 <body ng-app="sampleApp">
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" ng-controller="HeaderController">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -49,13 +43,17 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">TutorialsPoint</a>
+            <a class="navbar-brand" href="#">PankajApp</a>
         </div>
         <div>
             <div class="collapse navbar-collapse" id="example-navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#/route1" data-toggle="collapse">Two Way</a></li>
-                    <li><a href="#/localization" data-toggle="collapse">Localization</a></li>
+                    <li ng-class="{active : selectedMenu === 'twoWay'}">
+                        <a href="#/route1" data-toggle="collapse" ng-click="setMenuTitle('twoWay')">Two Way</a>
+                    </li>
+                    <li ng-class="{active : selectedMenu === 'localization'}">
+                        <a href="#/localization" data-toggle="collapse" ng-click="setMenuTitle('localization')">Localization</a>
+                    </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#"><span class="glyphicon glyphicon-user"></span> Pankaj </a></li>
@@ -77,8 +75,6 @@
         <div class="clearfix visible-lg"></div>
     </div>
 </div>
-
-
 
 </body>
 </html>

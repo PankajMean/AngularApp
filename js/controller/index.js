@@ -34,6 +34,14 @@ app.controller("ParamController", ['$scope', '$routeParams', function($scope, $r
     };
 }]);
 
+
+app.controller('HeaderController', ['$scope', 'Menu', function($scope, Menu){
+    //$scope.selectedMenu = Menu.selectedMenu;
+    $scope.setMenuTitle = function(menuTitle) {
+        $scope.selectedMenu = menuTitle;
+    };
+}]);
+
 /*$resource expects object or array as response from server, not raw string.
 So if you have raw string (or anything except object and array) as a response, you have to use $http*/
 

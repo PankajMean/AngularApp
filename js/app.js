@@ -12,7 +12,7 @@ module.config(['$routeProvider',
             }).
             when('/localization', {
                 templateUrl: 'localization.html',
-                controller: 'View2Controller'
+                controller: 'LocalizationController'
             }).
             when('/details/:name/:val', {
                 templateUrl: 'todo.html',
@@ -27,10 +27,13 @@ module.config(['$routeProvider',
 module.config(['$translateProvider', function($translateProvider){
     $translateProvider
     .translations('en', {
-    "hi" : "My Name is Pankaj Kumar Dewangan"
+    "hi": "My Name is Pankaj Kumar Dewangan"
     })
     .translations('ch', {
-        "hi" : "我的名字是潘卡·库马尔"
+        "hi": "我的名字是潘卡·库马尔"
+    })
+    .translations('hi', {
+            "hi": "मेरा नाम पंकज कुमार देवांगन है"
     })
     .preferredLanguage('en');
 }]);
