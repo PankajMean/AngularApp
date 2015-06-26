@@ -1,5 +1,5 @@
 /**
- * Created by sumasoft on 24/06/15.
+ * Created by Pankaj Kumar Dewangan on 24/06/15.
  */
 var app = angular.module('sampleApp');
 

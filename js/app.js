@@ -1,5 +1,5 @@
 /**
- * Created by sumasoft on 23/06/15.
+ * Created by Pankaj Kumar Dewangan on 23/06/15.
  */
 var module = angular.module("sampleApp", ['ngRoute','ngResource', 'ngAnimate', 'pascalprecht.translate']);
 
