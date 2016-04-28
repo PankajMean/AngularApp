@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head lang="en">
     <meta charset="UTF-8">
@@ -47,10 +47,10 @@
             <div class="collapse navbar-collapse" id="example-navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li ng-class="{active : selectedMenu === 'twoWay'}">
-                        <a href="#/route1" data-toggle="collapse" ng-click="setMenuTitle('twoWay')">Two Way</a>
+                        <a data-toggle="collapse" ng-click="setMenuTitle('twoWay', '/route1')">Two Way</a>
                     </li>
                     <li ng-class="{active : selectedMenu === 'localization'}">
-                        <a href="#/localization" data-toggle="collapse" ng-click="setMenuTitle('localization')">Localization</a>
+                        <a data-toggle="collapse" ng-click="setMenuTitle('localization', '/localization')">Localization</a>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">

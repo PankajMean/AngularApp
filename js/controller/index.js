@@ -35,11 +35,13 @@ app.controller("ParamController", ['$scope', '$routeParams', function($scope, $r
 }]);
 
 
-app.controller('HeaderController', ['$scope', 'Menu', function($scope, Menu){
+app.controller('HeaderController', ['$scope','$location', 'Menu', function($scope, $location, Menu){
     //$scope.selectedMenu = Menu.selectedMenu;
-    $scope.setMenuTitle = function(menuTitle) {
+    $scope.setMenuTitle = function(menuTitle, url) {
         $scope.selectedMenu = menuTitle;
+        $location.path(url);        
     };
+    
 }]);
 
 /*$resource expects object or array as response from server, not raw string.
